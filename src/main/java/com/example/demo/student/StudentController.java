@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.Arrays;
 import java.util.List;
 
@@ -22,7 +21,7 @@ public class StudentController {
     }
 
     @PostMapping
-    public void addStudent(@Valid @RequestBody Student student) {
+    public void addStudent(@RequestBody Student student) {
         studentService.addStudent(student);
     }
 
